@@ -27,7 +27,7 @@
                             <td>{{ $studente->code }}</td>
                             <td>{{ $studente->email }}</td>
                             <td>
-                                <a class="btn btn-info" href="/students/{{ $studente->id }}">Dettagli</a>
+                                <a class="btn btn-info" href="{{ route('students.show', ['student' => $studente->id])}}">Dettagli</a>
                             </td>
                         </tr>
                         @endforeach

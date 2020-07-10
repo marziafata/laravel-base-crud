@@ -6,7 +6,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="mt-3 mb-3">Lista Studenti</h1>
+                <div class="d-flex align-items-center">
+                    <h1 class="mt-3 mb-3">Lista Studenti</h1>
+                    <a class="btn btn-outline-success btn-sm" href="{{ route('students.create')}}"><strong>+</strong></a>
+                </div>
                 <table class="table">
                     <thead>
                         <tr>
@@ -15,7 +18,7 @@
                             <th>Cognome</th>
                             <th>Matricola</th>
                             <th>E-Mail</th>
-                            <th>Azioni</th>
+                            <th class="text-right">Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,8 +29,10 @@
                             <td>{{ $studente->surname }}</td>
                             <td>{{ $studente->code }}</td>
                             <td>{{ $studente->email }}</td>
-                            <td>
-                                <a class="btn btn-info" href="{{ route('students.show', ['student' => $studente->id])}}">Dettagli</a>
+                            <td class="text-right">
+                                <a class="btn btn-outline-primary btn-sm" href="{{ route('students.show', ['student' => $studente->id])}}">Dettagli</a>
+                                <a class="btn btn-outline-secondary btn-sm" href="{{ route('students.show', ['student' => $studente->id])}}">Modifica</a>
+                                <a class="btn btn-outline-danger btn-sm" href="{{ route('students.show', ['student' => $studente->id])}}">Cancella</a>
                             </td>
                         </tr>
                         @endforeach

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::resource('/students', 'StudentController'); //crea tutte le rotte in automatico e le nomina già
 //get product => la index

@@ -11,6 +11,7 @@
                 <li>ID: {{ $studente->id }}</li>
                 <li>Nome: {{ $studente->name }}</li>
                 <li>Cognome: {{ $studente->surname }}</li>
+                <li>Info: {{ $studente->note }}</li>
                 </ul>
             </div>
         </div>

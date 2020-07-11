@@ -11,3 +11,12 @@
 body > div > div > div > div > h1 {
     margin-right: 20px;
 }
+
+td.text-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+td.text-right > * {
+    margin: 0 3px;
+}

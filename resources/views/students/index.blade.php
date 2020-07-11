@@ -30,9 +30,17 @@
                             <td>{{ $studente->code }}</td>
                             <td>{{ $studente->email }}</td>
                             <td class="text-right">
-                                <a class="btn btn-outline-primary btn-sm" href="{{ route('students.show', ['student' => $studente->id])}}">Dettagli</a>
-                                <a class="btn btn-outline-secondary btn-sm" href="{{ route('students.show', ['student' => $studente->id])}}">Modifica</a>
-                                <a class="btn btn-outline-danger btn-sm" href="{{ route('students.show', ['student' => $studente->id])}}">Cancella</a>
+                                <a class="btn btn-outline-primary btn-sm" href="{{ route('students.show', ['student' => $studente->id])}}">
+                                    Dettagli
+                                </a>
+                                <a class="btn btn-outline-secondary btn-sm" href="{{ route('students.edit', ['student' => $studente->id])}}">
+                                    Modifica
+                                </a>
+                                <form action="{{ route('students.destroy', ['student' => $studente->id])}}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <input type='submit' class="btn btn-outline-danger btn-sm" value="Cancella">
+                                </form>
                             </td>
                         </tr>
                         @endforeach

@@ -29,7 +29,7 @@
                             <td>{{ $studente->surname }}</td>
                             <td>{{ $studente->code }}</td>
                             <td>{{ $studente->email }}</td>
-                            <td class="text-right">
+                            <td class="text-right allinea-bottoni">
                                 <a class="btn btn-outline-primary btn-sm" href="{{ route('students.show', ['student' => $studente->id])}}">
                                     Dettagli
                                 </a>

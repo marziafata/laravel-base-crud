@@ -70,7 +70,10 @@ class StudentController extends Controller
     public function edit($id)
     {
         $studente = Student::find($id);
-        return view('students.edit', compact('studente'));
+        if($studente) {
+            return view('students.edit', compact('studente'));
+        }
+        return abort('404');
     }
 
     /**

@@ -12,11 +12,15 @@ body > div > div > div > div > h1 {
     margin-right: 20px;
 }
 
-td.text-right {
+body > div > div > div > table > thead > tr > th.text-right {
+    padding: 12px 15px 12px 12px;
+}
+
+.allinea-bottoni {
     display: flex;
     justify-content: flex-end;
 }
 
-td.text-right > * {
+.allinea-bottoni > * {
     margin: 0 3px;
 }

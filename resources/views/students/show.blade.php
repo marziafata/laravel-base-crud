@@ -13,6 +13,19 @@
                 <li>Cognome: {{ $studente->surname }}</li>
                 <li>Info: {{ $studente->note }}</li>
                 </ul>
+                <div class="allinea-bottoni">
+                    <a class="btn btn-outline-primary btn-sm" href="{{ route('students.index')}}">
+                        Indietro
+                    </a>
+                    <a class="btn btn-outline-secondary btn-sm" href="{{ route('students.edit', ['student' => $studente->id])}}">
+                        Modifica
+                    </a>
+                    <form action="{{ route('students.destroy', ['student' => $studente->id])}}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <input type='submit' class="btn btn-outline-danger btn-sm" value="Cancella">
+                    </form>
+                </div>
             </div>
         </div>
     </div>

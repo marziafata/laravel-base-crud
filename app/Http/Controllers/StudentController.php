@@ -36,6 +36,12 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|max:255',
+            'surname' => 'required|max:255',
+            'code' => 'required|numeric|max:65536|unique:students,code',
+            'email' => 'required|max:255|email:rfc,dns|unique:students,email'
+        ]);
         $dati = $request->all();
         $nuovo_studente = new Student();
         $nuovo_studente->fill($dati);
@@ -86,6 +92,6 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view('students.destroy');
     }
 }

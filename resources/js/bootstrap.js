@@ -1,5 +1,6 @@
 window._ = require('lodash');
-
+// //In resources/js/bootstrap.js
+// window.$ = require('jquery');
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This

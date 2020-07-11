@@ -7,9 +7,33 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+a:not([href]):hover {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+.navbar {
+    padding: 0.5rem 0;
+}
 
 body > div > div > div > div > h1 {
     margin-right: 20px;
+}
+
+a.plus {
+    margin-right: 15px;
+}
+
+span.nuovo-studente {
+    color: #38c172;
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 16px;
+    // line-height: 28px;
 }
 
 body > div > div > div > table > thead > tr > th.text-right {

@@ -6,9 +6,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="d-flex align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
                     <h1 class="mt-3 mb-3">Lista Studenti</h1>
-                    <a class="btn btn-outline-success btn-sm" href="{{ route('students.create')}}"><strong>+</strong></a>
+                    <div class="d-flex align-items-baseline">
+                        <span class="nuovo-studente">Nuovo Studente</span>
+                        <a class="btn btn-outline-success btn-sm plus" href="{{ route('students.create')}}">+</a>
+                    </div>
                 </div>
                 <table class="table">
                     <thead>

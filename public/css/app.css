@@ -10969,3 +10969,7 @@ body > div > div > div > table > thead > tr > th.text-right {
   margin: 0 3px;
 }
 
+.data {
+  font-weight: bold;
+}
+

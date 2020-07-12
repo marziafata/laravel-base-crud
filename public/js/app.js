@@ -58487,7 +58487,6 @@ moment.locale('it'); // //dichiaro le variabili che mi serviranno con Handlebars
 // var template = Handlebars.compile(source);
 
 var data_corrente = moment().format('DD MMM YYYY HH:mm');
-console.log(data_corrente);
 $('.data').append(data_corrente);
 
 /***/ }),

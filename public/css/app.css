@@ -10970,6 +10970,7 @@ body > div > div > div > table > thead > tr > th.text-right {
 }
 
 .data {
-  font-weight: bold;
+  font-weight: 500;
+  font-family: system-ui;
 }
 

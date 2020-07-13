@@ -39,7 +39,12 @@
                         <label for="info">Note</label>
                         <textarea type="text" name="note" class="form-control" id="info" placeholder="Note aggiuntive">{{ old('note', $studente->note )}}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Salva</button>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="submit" class="btn btn-primary">Salva</button>
+                        <a class="btn btn-outline-dark" href="{{ route('students.index')}}">
+                            Indietro
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>
